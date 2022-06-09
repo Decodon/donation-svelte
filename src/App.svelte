@@ -5,6 +5,10 @@
   import Donate from "./pages/Donate.svelte";
   import Report from "./pages/Report.svelte";
   import Router from "svelte-spa-router";
+  import {DonationService} from "./services/donation-service";
+  import {setContext} from "svelte";
+
+  setContext("DonationService", new DonationService("http://localhost:4000"));
 
   let routes = {
     "/": Main,

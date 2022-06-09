@@ -2,6 +2,10 @@
     import homer from "/src/assets/homer.png";
     import WelcomeNavigator from "../components/WelcomeNavigator.svelte";
     import TitleBar from "../components/TitleBar.svelte";
+    import {getContext} from "svelte";
+
+    const donationService = getContext("DonationService");
+    donationService.logout();
 </script>
 
 <div class="columns is-vcentered">
