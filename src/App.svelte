@@ -7,6 +7,7 @@
   import Router from "svelte-spa-router";
   import {DonationService} from "./services/donation-service";
   import {setContext} from "svelte";
+  import Map from "./pages/Map.svelte";
 
   setContext("DonationService", new DonationService("http://localhost:4000"));
 
@@ -14,9 +15,9 @@
     "/": Main,
     "/login": Login,
     "/signup": Signup,
-    "/main": Main,
     "/donate": Donate,
     "/report": Report,
+    "/map": Map,
     "/logout": Main
   }
 </script>
